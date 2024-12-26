@@ -41,6 +41,12 @@ export const Lang = {
       DES_LANDING: "We bring your ideas to life",
       SUB_DES_LANDING: "with cutting-edge  technology",
       TEXT_BUTTON: "  Get Consultation",
+      NUMBER_CLIENT: "Number of clients",
+
+      CARD_1: {
+        TITLE: "Mohmmed Ahmed",
+        DES: "They care about the smallest details",
+      },
     },
     SERVICES: {
       DATA_SER: [

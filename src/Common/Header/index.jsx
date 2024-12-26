@@ -68,7 +68,6 @@ function Header({ schangebackground }) {
     }
     return (
         <header ref={HeaderRef} className="Header">
-
             <div className=" flex gap-x-[0.3rem] items-center ">
                 <div className=" w-[50px] h-[50px] ">
                     <img src="/Img/icons/96.png" className=" w-full object-cover   rounded-[50%]" alt="logo" />
@@ -78,20 +77,23 @@ function Header({ schangebackground }) {
                     Helper.Locals.map((lang) => {
                         if (lang.Value == CurrentLang) return null
                         return (
-                            <div key={lang.Value} className={`
+                            <div
+                                onClick={() => Dispatch(SetNewLang(lang.Value))}
+                                key={lang.Value} className={`
                             Box-Lang
                             hover:scale-[1.05]
                             duration-300
                             Shadow-Lg
                             cursor-pointer
                                 `}
+                                // ==============================Eng Sabry 
                                 style={{
                                     background: `url('/Img/Lang/${lang.Value}.svg') no-repeat`,
                                     backgroundSize: "cover",
                                     objectFit: "cover"
 
                                 }}
-                                onClick={() => Dispatch(SetNewLang(lang.Value))}
+
                             />
                         )
                     })
@@ -122,7 +124,7 @@ function Header({ schangebackground }) {
                         );
                     })}
                 </ul>
-                <div className="Icon-Links bg-[red]">
+                <div className="Icon-Links ">
                     <div onClick={Toggle} className="Menu-Icon">
                         {[1, 2, 3].map((_, index) => (
                             <span

@@ -10,6 +10,7 @@
   --Second-Background: #15bdc9;
   --Third-Background-Circle: #193b65;
   --Bg-Active: #27cfdb;
+  --Transition: 0.3s all;
 }
 * {
   font-family: "Poppins", serif !important;
@@ -30,7 +31,7 @@
     background-color: var(--Main-Color);
     border-radius: 25px;
     text-transform: capitalize;
-    transition: 0.3s transform;
+    transition: var(--Transition);
     gap: 0.3rem;
     position: relative;
     z-index: 1;
@@ -38,10 +39,10 @@
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-    -webkit-transition: 0.3s transform;
-    -moz-transition: 0.3s transform;
-    -ms-transition: 0.3s transform;
-    -o-transition: 0.3s transform;
+    -webkit-transition: var(--Transition);
+    -moz-transition: var(--Transition);
+    -ms-transition: var(--Transition);
+    -o-transition: var(--Transition);
   }
 
   @media (max-width: 768px) {

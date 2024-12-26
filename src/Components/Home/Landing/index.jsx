@@ -2,9 +2,12 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 import "./landin.css"
-import { Lang } from "@/Lang/Lang";
+
+import { useLang } from "@/Hooks";
 
 const Landing = () => {
+
+    const Lang = useLang()
     return (
         <div className="Main-Bg h-[100vh] w-full   relative"  >
 

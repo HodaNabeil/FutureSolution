@@ -39,11 +39,11 @@
 }
 .Nav-Links .nav-link:hover {
   color: var(--Bg-Active);
-  transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -webkit-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
+  transition: var(--Transition);
+  -moz-transition: var(--Transition);
+  -ms-transition: var(--Transition);
+  -webkit-transition: var(--Transition);
+  -o-transition: var(--Transition);
 }
 .Nav-Links .nav-link:hover::before {
   opacity: 0;
@@ -77,11 +77,11 @@
   transform: translateX(-50%);
   background-color: var(--Main-Color);
   opacity: 0;
-    -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .Nav-Links .nav-link::before {
   content: "";
@@ -92,11 +92,11 @@
   border-radius: 50%;
   left: -15px;
   background-color: var(--Main-Color);
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .Nav-Links .nav-link-Rtl::before {
   content: "";
@@ -107,11 +107,11 @@
   border-radius: 50%;
   right: -15px;
   background-color: var(--Main-Color);
-    -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .Icon-Links {
   display: flex;
@@ -193,7 +193,7 @@
 }
 
 @media (max-width: 768px) {
-  .Header{
+  .Header {
     padding: 25px 30px;
   }
   .Menu-Icon {
