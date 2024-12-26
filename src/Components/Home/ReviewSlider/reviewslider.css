@@ -1,7 +1,7 @@
 .btn-slider {
   width: 30px;
   height: 30px;
-  color: var(--second-color);
+  color: var(--Second-Color);
   background-color: #daf7ff;
   position: absolute;
   top: 50%;
@@ -18,7 +18,7 @@
 }
 .btn-slider:hover {
   background-color: var(--Main-Color) !important;
-  color: var(--Main-Color);
+  color: var(--Bg-Active);
   border-color: var(--Bg-Active);
 }
 .btn-slider.left {

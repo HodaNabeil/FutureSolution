@@ -1,75 +1,78 @@
 .contact-page .container-icons div {
-    width: 40px;
-    height: 40px;
-    padding: 4px 6px;
-    background-color: var(--Bg-Active);
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.4s all ease;
-    --transition: 0.4s all ease;
-    --o-transition: 0.4s all ease;
-    --webkite-transition: 0.4s all ease;
-    --moz-transition: 0.4s all ease;
-    --ms-transition: 0.4s all ease;
+  width: 40px;
+  height: 40px;
+  padding: 4px 6px;
+  background-color: var(--Bg-Active);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.4s all ease;
+  --transition: 0.4s all ease;
+  --o-transition: 0.4s all ease;
+  --webkite-transition: 0.4s all ease;
+  --moz-transition: 0.4s all ease;
+  --ms-transition: 0.4s all ease;
 }
 
 .contact-page .container-icons div {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    color: var(--Main-Color);
-    font-size: 18px;
-    margin-top: 10px;
-    transition: 0.4s all ease;
-    --transition: 0.4s all ease;
-    --o-transition: 0.4s all ease;
-    --webkite-transition: 0.4s all ease;
-    --moz-transition: 0.4s all ease;
-    --ms-transition: 0.4s all ease;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: var(--Main-Color);
+  font-size: 18px;
+  margin-top: 10px;
+  transition: 0.4s all ease;
+  --transition: 0.4s all ease;
+  --o-transition: 0.4s all ease;
+  --webkite-transition: 0.4s all ease;
+  --moz-transition: 0.4s all ease;
+  --ms-transition: 0.4s all ease;
 }
 
 .contact-page .container-icons div:hover {
-    box-shadow: 0 0 5px 0 #27cfdb;
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
+  box-shadow: 0 0 5px 0 #27cfdb;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .contact-page .container-form {
-    width: 100%;
-    padding: 10px;
+  width: 100%;
+  padding: 10px;
 }
 
 .contact-page .container-form div {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-page .container-form div label {
-    color: var(--Second-Color);
-    margin-bottom: 6px;
-    text-transform: capitalize;
+  color: var(--Second-Color);
+  margin-bottom: 6px;
+  text-transform: capitalize;
 }
 
 .contact-page .container-form div input {
-    border: var(--Bg-Active) 1px solid;
-    outline: none;
-    border-radius: 4px;
-    padding: 6px 8px;
+  border: var(--Bg-Active) 1px solid;
+  outline: none;
+  border-radius: 4px;
+  padding: 6px 8px;
 }
 
 .contact-page .container-form div textarea {
-    border: var(--Bg-Active) 1px solid;
-    padding: 10px;
-    outline: none;
-    border-radius: 4px;
+  border: var(--Bg-Active) 1px solid;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
 }
 
+.contact-page .container-form .Main-Btn {
+  border: 1px solid var(--Bg-Active);
+}
 @media (max-width: 768px) {
-    .contact-page .container-form div label {
-        font-size: 15px !important;
-    }
+  .contact-page .container-form div label {
+    font-size: 15px !important;
+  }
 }

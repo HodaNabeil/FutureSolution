@@ -25,19 +25,19 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.Header .Nav-Links {
+.Nav-Links {
   display: flex;
   align-content: center;
   column-gap: 1rem;
 }
 
-.Header .Nav-Links .nav-link {
+.Nav-Links .nav-link {
   margin-right: 8px;
   position: relative;
   display: block;
   color: var(--Main-Color);
 }
-.Header .Nav-Links .nav-link:hover {
+.Nav-Links .nav-link:hover {
   color: var(--Bg-Active);
   transition: 0.4s all ease;
   -moz-transition: 0.4s all ease;
@@ -45,15 +45,13 @@
   -webkit-transition: 0.4s all ease;
   -o-transition: 0.4s all ease;
 }
-.Header .Nav-Links .nav-link:hover::before {
+.Nav-Links .nav-link:hover::before {
   opacity: 0;
 }
-
-.Header .Nav-Links .nav-link:hover::after {
+.Nav-Links .nav-link:hover::after {
   opacity: 1;
 }
-
-.Header .Nav-Links .nav-link.active {
+.Nav-Links .nav-link.active {
   color: var(--Bg-Active);
   font-weight: 600;
   transition: 0.4s;
@@ -62,15 +60,13 @@
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
 }
-
-.Header .Nav-Links .nav-link.active::before {
+.Nav-Links .nav-link.active::before {
   opacity: 0;
 }
-
-.Header .Nav-Links .nav-link.active::after {
+.Nav-Links .nav-link.active::after {
   opacity: 1;
 }
-.Header .Nav-Links .nav-link::after {
+.Nav-Links .nav-link::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -81,6 +77,11 @@
   transform: translateX(-50%);
   background-color: var(--Main-Color);
   opacity: 0;
+    -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 .Nav-Links .nav-link::before {
   content: "";
@@ -91,13 +92,33 @@
   border-radius: 50%;
   left: -15px;
   background-color: var(--Main-Color);
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
-.Header .Icon-Links {
+.Nav-Links .nav-link-Rtl::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  right: -15px;
+  background-color: var(--Main-Color);
+    -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.Icon-Links {
   display: flex;
   column-gap: 10px;
   align-items: center;
 }
-.Header .Icon-Links > a {
+.Icon-Links > a {
   color: var(--Bg-Active);
   border: 1px solid var(--Main-Color);
   width: 40px;
@@ -109,7 +130,7 @@
   align-items: center;
 }
 
-.Header .icon-number {
+.icon-number {
   position: absolute;
   top: -20px;
   right: -10px;
@@ -123,14 +144,14 @@
   border-radius: 50%;
   font-size: 13px;
 }
-.Header .Menu-Icon {
+.Menu-Icon {
   width: 34px;
   height: 20px;
   position: relative;
   cursor: pointer;
   display: none;
 }
-.Header .Menu-Icon span {
+.Menu-Icon span {
   height: 2px;
   left: 0;
   position: absolute;
@@ -144,38 +165,38 @@
   -o-transition: 0.4s;
 }
 
-.Header .Menu-Icon span:first-child {
+.Menu-Icon span:first-child {
   top: 0;
 }
 
-.Header .Menu-Icon span:nth-child(2) {
+.Menu-Icon span:nth-child(2) {
   top: 12px;
 }
 
-.Header .Menu-Icon span:last-child {
+.Menu-Icon span:last-child {
   top: 22px;
 }
-.Header .Menu-Icon span:first-child.Active-Menu {
+.Menu-Icon span:first-child.Active-Menu {
   transform: rotate(45deg);
 }
-.Header .Menu-Icon span:nth-child(2).Active-Menu {
+.Menu-Icon span:nth-child(2).Active-Menu {
   opacity: 0;
 }
 
-.Header .Menu-Icon span:first-child.Active-Menu,
-.Header .Menu-Icon span:last-child.Active-Menu {
+.Menu-Icon span:first-child.Active-Menu,
+.Menu-Icon span:last-child.Active-Menu {
   top: 12px;
 }
 
-.Header .Menu-Icon span:last-child.Active-Menu {
+.Menu-Icon span:last-child.Active-Menu {
   transform: rotate(-45deg);
 }
 
 @media (max-width: 768px) {
-  .Header {
+  .Header{
     padding: 25px 30px;
   }
-  .Header .Menu-Icon {
+  .Menu-Icon {
     display: block;
   }
   .Nav-Links {
@@ -191,7 +212,7 @@
     height: 0;
   }
 
-  .Header .Nav-Links .nav-link::after {
+  .Nav-Links .nav-link::after {
     background-color: var(--Bg-Active);
   }
   .Nav-Links .nav-link::before {
@@ -221,17 +242,17 @@
   .Header {
     padding: 20px 25px;
   }
-  .Header .Icon-Links {
+  .Icon-Links {
     column-gap: 10px !important;
   }
-  .Header .Icon-Links > a {
+  .Icon-Links > a {
     width: 35px;
     height: 35px;
   }
-  .Header .Icon-Links > a i {
+  .Icon-Links > a i {
     padding: 5px;
   }
-  .Header .icon-number {
+  .icon-number {
     top: -15px;
   }
 }
@@ -246,11 +267,11 @@
 }
 
 @media (min-width: 991px) {
-  .Header .Nav-Links .nav-link {
+  .Nav-Links .nav-link {
     margin-right: 20px !important;
   }
 
-  .Header .Icon-Links {
+  .Icon-Links {
     gap: 20px !important;
   }
 }

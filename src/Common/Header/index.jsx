@@ -1,7 +1,7 @@
 
 import "./header.css";
 import { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { SetNewLang } from "@/Redux";
 import { useLang } from "@/Hooks";
 import { Helper } from "@/Utility";
@@ -13,7 +13,7 @@ function Header({ schangebackground }) {
     const Lang = useLang()
     const HeaderRef = useRef();
     const [OpenNav, setOpenNav] = useState(false);
-
+    const { Lang: CurrentLang, Rtl } = useSelector(state => state.Helper)
 
 
     // eslint-disable-next-line no-unused-vars
@@ -71,20 +71,28 @@ function Header({ schangebackground }) {
 
             <div className=" flex gap-x-[0.3rem] items-center ">
                 <div className=" w-[50px] h-[50px] ">
-                    <img src="/Img/logo2.jpg" className=" w-full object-cover   rounded-[50%]" alt="logo" />
+                    <img src="/Img/icons/96.png" className=" w-full object-cover   rounded-[50%]" alt="logo" />
                 </div>
 
                 {
                     Helper.Locals.map((lang) => {
+                        if (lang.Value == CurrentLang) return null
                         return (
-                            <div key={lang.Value} className=" Box-Lang flex justify-center  items-center
+                            <div key={lang.Value} className={`
+                            Box-Lang
                             hover:scale-[1.05]
                             duration-300
-                            "
+                            Shadow-Lg
+                            cursor-pointer
+                                `}
+                                style={{
+                                    background: `url('/Img/Lang/${lang.Value}.svg') no-repeat`,
+                                    backgroundSize: "cover",
+                                    objectFit: "cover"
+
+                                }}
                                 onClick={() => Dispatch(SetNewLang(lang.Value))}
-                            >
-                                <p >{lang.Value}</p>
-                            </div>
+                            />
                         )
                     })
                 }
@@ -92,16 +100,21 @@ function Header({ schangebackground }) {
             </div>
 
             <nav>
-                <ul className={`Nav-Links ${OpenNav == true ? "Show" : ""}`}>
+                <ul className={`Nav-Links ${OpenNav == true ? "Show" : ""}`}
+                    dir={Rtl ? "rtl" : 'ltr'}
+                >
                     {Links?.map((link, index) => {
+                        const DirClass = Rtl ? "nav-link-Rtl" : ""
                         return (
-                            <li key={index}>
+                            <li key={index}
+
+                            >
                                 <a href={link.to}
                                     onClick={() => {
                                         HandleActiveLinke(link.NameLink);
                                     }}
                                     to={link.to}
-                                    className={`nav-link ${OpenNav ? "Show" : ""}`}
+                                    className={`nav-link ${DirClass} ${OpenNav ? "Show" : ""}`}
                                 >
                                     {link.NameLink}
                                 </a>
@@ -109,7 +122,7 @@ function Header({ schangebackground }) {
                         );
                     })}
                 </ul>
-                <div className="Icon-Links">
+                <div className="Icon-Links bg-[red]">
                     <div onClick={Toggle} className="Menu-Icon">
                         {[1, 2, 3].map((_, index) => (
                             <span

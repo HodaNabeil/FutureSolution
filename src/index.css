@@ -140,6 +140,22 @@
 }
 
 /* ========================= */
+.Scroll-Top {
+  position: fixed;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  color: #fefae0;
+  background-color: var(--Bg-Active);
+  z-index: 4;
+  right: 27px;
+  padding: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  padding-top: 10px;
+}
 /* Container  */
 .container {
   padding-left: 60px !important;

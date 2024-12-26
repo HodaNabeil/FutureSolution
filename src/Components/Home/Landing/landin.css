@@ -5,6 +5,20 @@
   overflow: hidden;
   border-radius: 0.6rem;
 }
+
+@media (max-width: 768px) {
+  .Box-Landing {
+  height: 220px;
+}
+}
+
+@media (max-width: 576px) {  
+  .Box-Landing {
+  height: 220px;
+  }
+}
+
+
 .Box-Img {
   width: 324px;
   left: -50%;

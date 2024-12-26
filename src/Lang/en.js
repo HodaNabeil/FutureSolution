@@ -31,6 +31,7 @@ export const Lang = {
 
   NAVBAR_LINKS: ["Home", "Our Services", "About", "Contact"],
 
+  //  PAGE_HOME?.lANDING?.?SUB_TITLE
   PAGE_HOME: {
     lANDING: {
       SUB_TITLE: "Future Solutions",
@@ -65,6 +66,25 @@ export const Lang = {
         "We provide fast and secure web hosting services tailored to your business needs. Whether you're managing a small website or a large platform, we offer solutions.",
         "We provide a fast and secure environment to get tasks done efficiently, while ensuring data security and easy access without the need for the Internet. It can also be customized to meet the needs of the project, which enhances productivity and provides a superior user experience.",
       ],
+    },
+
+    REVIEWSLIDER: {
+      DES: [
+        "High level of sophistication in dealing. Enjoy the quality",
+        "High level of sophistication in dealing. Enjoy the quality",
+
+        "High level of sophistication in dealing. Enjoy the quality",
+      ],
+      CUSTOMER_REVIEWS: "Customer reviews",
+    },
+  },
+  //{FOOTER?.COLS?.COL_1.TITLE}
+  FOOTER: {
+    COPYR: "2025 A-PRIL ALL RIGHTS RESERVED",
+    COLS: {
+      COL_1: {
+        TITLE: "   About Future Solutions ",
+      },
     },
   },
 };

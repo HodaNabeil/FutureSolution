@@ -1,0 +1,84 @@
+{
+  "name": "Future Solutions",
+  "short_name": "Future Solutions",
+  "start_url": "/",
+  "id": "17339846978123",
+  "theme_color": "#28408c",
+  "background_color": "#ffffff",
+  "description": "Future Solutions (Bring Your Vision To Life).",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "auto",
+  "orientations": ["portrait", "landscape"],
+  "prefer_related_applications": true,
+  "display": "standalone",
+  "orientation": "any",
+  "display_override": [
+    "fullscreen",
+    "browser",
+    "minimal-ui",
+    "window-controls-overlay"
+  ],
+  "icons": [
+    {
+      "src": "Img/favicon.png",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "Img/icons/16.png",
+      "type": "image/png",
+      "sizes": "16x16",
+      "purpose": "any"
+    },
+    {
+      "src": "Img/icons/32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "any"
+    },
+    {
+      "src": "Img/icons/128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "Img/icons/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "Img/icons/192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "Img/icons/256.png",
+      "type": "image/png",
+      "sizes": "256x256",
+      "purpose": "any"
+    },
+    {
+      "src": "Img/icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "Img/icons/1920x1080.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "Img/icons/750x1334.png",
+      "sizes": "750x1334",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": []
+}

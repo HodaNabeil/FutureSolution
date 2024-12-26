@@ -2,23 +2,26 @@ import { useEffect, useState } from "react";
 
 
 import "./reviewslider.css"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { useLang } from "@/Hooks";
 function ReviewSlider() {
     const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+    const Lang = useLang()
     const reviewSlider = [
         {
             url: "/Img/client_1.jpg",
             name: "Hoda Nabeil",
-            des: "High level of sophistication in dealing. Enjoy the quality",
+            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DES?.[0]
         },
         {
             url: "/Img/client_2.jpg",
             name: "Mohmed Ahmed",
-            des: "High level of sophistication in dealing. Enjoy the quality",
+            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DES?.[1]
         },
         {
             url: "/Img/client_3.jpg",
             name: "Tark Mohmed",
-            des: "High level of sophistication in dealing. Enjoy the quality",
+            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DES?.[2]
         },
     ];
 
@@ -43,30 +46,33 @@ function ReviewSlider() {
     }, []);
 
     return (
-        <div className="Bg-light review-slider">
-            <div className=" container  bg-[#fff] py-[50px] ">
-                <div className=" w-[70%] m-auto relative rounded-[6px] p-[20px]  Bg-Review-Slider ">
-                    <div className=" flex justify-center items-center m-auto">
+        <div className="Bg-light review-slider pt-[80px] ">
+            <div className=" container  bg-white py-[50px] ">
+
+
+                <h2 className=" Flex-Center font-bold   text-[1.1rem] md:text-xl lg:text-2xl Active-Color">{Lang?.PAGE_HOME?.REVIEWSLIDER?.CUSTOMER_REVIEWS}</h2>
+                <div className=" w-[70%] m-auto relative Rounded-6 p-[1.2rem] mt-[80px]  Bg-Review-Slider ">
+                    <div className=" Flex-Center m-auto">
                         <img
                             className=" w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[150px] md:h-[150px] 
-               lg:w-[180px] lg:h-[180px] rounded-[50%] "
+                             lg:w-[180px] lg:h-[180px] rounded-[50%] "
                             src={reviewSlider[currentReviewIndex].url}
                             alt={`Client ${currentReviewIndex + 1}`}
                         />
                     </div>
-                    <h3 className=" color-light my-[8px] font-bold font-2 tracking-[1px]">{reviewSlider[currentReviewIndex].name}</h3>
-                    <p className=" text-sm sm:text-[15px]  md:text-[16px] text-dark ">{reviewSlider[currentReviewIndex].des}</p>
+                    <h3 className=" Main-Color t my-[8px] font-bold  tracking-[1px]">{reviewSlider[currentReviewIndex].name}</h3>
+                    <p className=" Second-Color  text-sm sm:text-[15px]  md:text-[16px] text-dark ">{reviewSlider[currentReviewIndex].des}</p>
                     <button
-                        className="btn-slider left   "
+                        className="btn-slider left Flex-Center   "
                         onClick={prevReview}
                     >
-                        <i className=" icon-slider  fa-solid fa-arrow-left"></i>
+                        <FaArrowLeft className=" icon-slider  fa-solid" />
                     </button>
                     <button
-                        className="btn-slider rigth  "
+                        className="btn-slider rigth Flex-Center   "
                         onClick={nextReview}
                     >
-                        <i className=" icon-slider  fa-solid fa-arrow-right"></i>
+                        <FaArrowRight className=" icon-slider    fa-solid" />
                     </button>
 
                 </div>

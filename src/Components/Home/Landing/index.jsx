@@ -8,7 +8,7 @@ const Landing = () => {
     return (
         <div className="Main-Bg h-[100vh] w-full   relative"  >
 
-            <div className="  flex flex-col pt-[5rem]   md:pt-0  md:flex-row  md:justify-between  absolute items-center   container  
+            <div className="  flex flex-col  pt-[2.5rem]   md:pt-0  md:flex-row  md:justify-between  absolute items-center   container  
                top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%]  ">
 
                 <div className="  Main-Color " >
@@ -101,7 +101,7 @@ const Landing = () => {
 
                         <div className=" sm:w-[10rem]  sm:h-[13rem]  md:w-[12rem] lg:w-[15.6rem] ">
                             <div className="Box-Landing  relative   ">
-                                <img src="/public/Img/lang_1.png" alt="Hero-Landing"
+                                <img src="/public/Img/Landing-img-2.png" alt="Hero-Landing"
                                     className=" object-cover  max-w-[100%] h-[100%] "
                                 />
                                 <div className="Box-Content text-center md:text-left     absolute   bottom-[0]    Second-Color      ">

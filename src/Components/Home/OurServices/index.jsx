@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import "./services.css";
-import DesModal from "../../../Common/Modale/Des-Modal";
+import DesModal from "../../../Common/Modale";
 import CardServies from "./Card";
 
 import { useLang } from "@/Hooks";
@@ -94,9 +94,13 @@ const OurServices = () => {
     return (
         <div className="  ">
             <div className="relative ">
-                <div className="flex justify-between items-center Card-Light Shadow-Lg absolute  left-[50%]  w-[80%] m-auto translate-x-[-50%] top-[-50px] ">
+                <div
+                    className="flex justify-between items-center Card-Light Shadow-Lg 
+         
+                absolute  left-[50%]  w-[80%] m-auto translate-x-[-50%] top-[-50px] "
+                >
                     {services?.map((item, index) => (
-                        <div key={index} className="flex  flex-col md:flex-row items-center    p-[0.3rem]   sm:px-[0.2rem] sm:py-[1rem]   sm:gap-[0.5rem]">
+                        <div key={index} className="flex  flex-col  gap-[0.3rem] md:flex-row items-center    p-[0.3rem]   sm:px-[0.2rem] sm:py-[1rem]   sm:gap-[0.5rem]">
                             <div className=" w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]">
                                 <img
                                     src={`/Img/Serv/${item.icon}`}

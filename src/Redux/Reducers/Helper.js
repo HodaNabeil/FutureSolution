@@ -1,9 +1,9 @@
 import { Helper } from "@/Utility";
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-    Lang: "en",
-    Rtl: false,
-    NavHeight: "9.70",
+  Lang: Helper.GetStorage("Lang"),
+  Rtl: Helper.GetStorage("Lang") == "ar",
+  NavHeight: "9.70",
 };
 const Reducer = createSlice({
     name: "Helper",
