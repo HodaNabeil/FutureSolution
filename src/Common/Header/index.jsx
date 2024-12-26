@@ -41,8 +41,8 @@ function Header({ schangebackground }) {
         const HandleClikOutSide = (e) => {
             if (
                 OpenNav &&
-                !e.target.closest(".nav-links") &&
-                !e.target.closest(".menu-icon")
+                !e.target.closest(".Nav-Links") &&
+                !e.target.closest(".Menu-Icon")
             ) {
                 setOpenNav(false);
             }
@@ -67,7 +67,7 @@ function Header({ schangebackground }) {
         setOpenNav((prev) => !prev);
     }
     return (
-        <header ref={HeaderRef} className="header ">
+        <header ref={HeaderRef} className="Header">
 
             <div className=" flex gap-x-[0.3rem] items-center ">
                 <div className=" w-[50px] h-[50px] ">
@@ -92,7 +92,7 @@ function Header({ schangebackground }) {
             </div>
 
             <nav>
-                <ul className={`nav-links ${OpenNav == true ? "show" : ""}`}>
+                <ul className={`Nav-Links ${OpenNav == true ? "Show" : ""}`}>
                     {Links?.map((link, index) => {
                         return (
                             <li key={index}>
@@ -101,7 +101,7 @@ function Header({ schangebackground }) {
                                         HandleActiveLinke(link.NameLink);
                                     }}
                                     to={link.to}
-                                    className={`nav-link ${OpenNav ? "show" : ""}`}
+                                    className={`nav-link ${OpenNav ? "Show" : ""}`}
                                 >
                                     {link.NameLink}
                                 </a>
@@ -109,12 +109,12 @@ function Header({ schangebackground }) {
                         );
                     })}
                 </ul>
-                <div className="icon-links">
-                    <div onClick={Toggle} className="menu-icon">
+                <div className="Icon-Links">
+                    <div onClick={Toggle} className="Menu-Icon">
                         {[1, 2, 3].map((_, index) => (
                             <span
                                 key={index}
-                                className={`menu-bar ${OpenNav ? "active-menu" : ""}`}
+                                className={`Menu-Bar ${OpenNav ? "Active-Menu" : ""}`}
                             ></span>
                         ))}
                     </div>

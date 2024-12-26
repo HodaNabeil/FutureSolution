@@ -28,4 +28,16 @@ export const Lang = {
   UNSELECT_ALL: "UnSelect All",
   // ============Navbar Links
   NAVBAR_LINKS: ["الصفحة الرئيسية", "خدماتنا", "نحن", "اتصل بنا"],
+
+  PAGE_HOME: {
+    lANDING: {
+      SUB_TITLE: "حلول مستقبلية",
+      TOP_TITLE: "مبتكرة",
+      PART_OF_TITLE: "لتلبية احتياجاتك الرقمية",
+      UNIQUE_KEY_TITLE: "الحلول",
+      DES_LANDING: "نعمل على إحياء أفكارك",
+      SUB_DES_LANDING: "باستخدام أحدث التقنيات",
+      TEXT_BUTTON: "احصل على استشارة",
+    },
+  },
 };

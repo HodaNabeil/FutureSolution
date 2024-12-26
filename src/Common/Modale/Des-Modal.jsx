@@ -18,7 +18,8 @@ function DesModal({ des, img, onClose, ModleRef }) {
             items-center 
             flex-col
             w-[50%] 
-            z-10  absolute
+            z-10  
+            fixed
             top-[50%] left-[50%]  
             translate-x-[-50%] translate-y-[-50%]
             Bg-light

@@ -1,0 +1,49 @@
+.btn-slider {
+  width: 30px;
+  height: 30px;
+  color: var(--second-color);
+  background-color: #daf7ff;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  border: 1px transparent dashed;
+
+  transition: all 0.4s linear;
+  --transition: all 0.4s linear;
+  --o-transition: all 0.4s linear;
+  --webkite-transition: all 0.4s linear;
+  --moz-transition: all 0.4s linear;
+  --ms-transition: all 0.4s linear;
+}
+.btn-slider:hover {
+  background-color: var(--Main-Color) !important;
+  color: var(--Main-Color);
+  border-color: var(--Bg-Active);
+}
+.btn-slider.left {
+  left: 0;
+}
+.btn-slider.rigth {
+  right: -25px;
+}
+.icon-slider {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 567px) {
+  .btn-slider {
+    width: 25px;
+    height: 20px;
+  }
+  .btn-slider i {
+    font-size: 12px !important;
+  }
+}
+
+.Bg-Review-Slider {
+  background-color: #4eaec7;
+}

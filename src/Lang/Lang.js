@@ -27,10 +27,11 @@ export const Lang = {
   SELECT_ALL: "Select All",
   UNSELECT_ALL: "UnSelect All",
 
+  CUSTOMER_REVIEWS: " Customer reviews",
+
   // ==============NavBar
-
   NAVBAR_LINKS: ["Home", "Our Services", "About", "Contact"],
-
+  // PAGE_HOME.lANDING.CARD_1.TITLE
   PAGE_HOME: {
     lANDING: {
       SUB_TITLE: "Future Solutions",
@@ -40,7 +41,14 @@ export const Lang = {
       DES_LANDING: "We bring your ideas to life",
       SUB_DES_LANDING: "with cutting-edge  technology",
       TEXT_BUTTON: "  Get Consultation",
+      NUMBER_CLIENT: "Number of clients",
+
+      CARD_1: {
+        TITLE: "Mohmmed Ahmed",
+        DES: "They care about the smallest details",
+      },
     },
+    //PAGE_HOME SERVICES DATA_SER
     SERVICES: {
       DATA_SER: [
         "The company’s technological efficiency and quality reflect its ability to deliver innovative and reliable products...",
