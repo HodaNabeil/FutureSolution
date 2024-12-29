@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { SetNewLang } from "@/Redux";
 import { useLang } from "@/Hooks";
 import { Helper } from "@/Utility";
+import OurServices from "@/Components/Home/OurServices";
+import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
@@ -54,15 +56,15 @@ function Header({ schangebackground }) {
             window.removeEventListener("click", HandleClikOutSide);
         };
     }, [OpenNav]);
+
+
     const Links = [
         { NameLink: Lang?.NAVBAR_LINKS?.[0] || "Home", to: "/" },
-        { NameLink: Lang?.NAVBAR_LINKS?.[1] || "About", to: "#about" },
-        { NameLink: Lang?.NAVBAR_LINKS?.[2] || "Services", to: "#services" },
+        { NameLink: Lang?.NAVBAR_LINKS?.[1] || "Our Services", to: <OurServices /> },
+        { NameLink: Lang?.NAVBAR_LINKS?.[2] || "About", to: "#about" },
         { NameLink: Lang?.NAVBAR_LINKS?.[3] || "Contact", to: "#contact" },
     ];
-    function HandleActiveLinke(link) {
-        setActiveLinke(link);
-    }
+
     function Toggle() {
         setOpenNav((prev) => !prev);
     }
@@ -111,15 +113,12 @@ function Header({ schangebackground }) {
                             <li key={index}
 
                             >
-                                <a href={link.to}
-                                    onClick={() => {
-                                        HandleActiveLinke(link.NameLink);
-                                    }}
-                                    to={link.to}
+                                <Link to={link.to}
+
                                     className={`nav-link ${DirClass} ${OpenNav ? "Show" : ""}`}
                                 >
                                     {link.NameLink}
-                                </a>
+                                </Link>
                             </li>
                         );
                     })}

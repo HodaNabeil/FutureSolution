@@ -63,12 +63,40 @@
     -ms-transform: translatex(10px);
     -o-transform: translatex(10px);
   }
+  .Main-Btn:hover .Icon-Main-Btn-Rtl {
+    transform: translatex(-10px);
+    transition: 0.4s all;
+    -webkit-transition: 0.4s all;
+    -moz-transition: 0.4s all;
+    -ms-transition: 0.4s all;
+    -o-transition: 0.4s all;
+    -webkit-transform: translatex(-10px);
+    -moz-transform: translatex(-10px);
+    -ms-transform: translatex(-10px);
+    -o-transform: translatex(-10px);
+  }
   .Main-Btn::before {
     content: "";
     width: 0%;
     height: 0%;
     position: absolute;
     left: 0px;
+    top: 0;
+    background-color: var(--Bg-Active);
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.4s all;
+    -webkit-transition: 0.4s all;
+    -moz-transition: 0.4s all;
+    -ms-transition: 0.4s all;
+    -o-transition: 0.4s all;
+  }
+  .Main-Btn-Rtl::before {
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    right: 0px;
     top: 0;
     background-color: var(--Bg-Active);
     border-radius: 25px;
@@ -106,6 +134,9 @@
   .Bg-Dark {
     background-color: var(--Third-Background-Circle);
   }
+  .Bg-Second {
+    background-color: var(--Second-Background);
+  }
   .Bg-Active {
     background-color: var(--Bg-Active);
   }
@@ -132,11 +163,7 @@
     /* background-color: transparent; */
   }
   .Rounded-6 {
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
+    border-radius: 0.6rem;
   }
 }
 
@@ -159,30 +186,30 @@
 }
 /* Container  */
 .container {
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
 @media (max-width: 991px) {
   .container {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
-    padding-left: 30px !important;
+    padding-left:  !important;
     padding-right: 30px !important;
   }
-}
+} */
 
 @media (max-width: 576px) {
   .container {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   .main-btn {
@@ -192,7 +219,7 @@
 
 @media (max-width: 300px) {
   .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 }

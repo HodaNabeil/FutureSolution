@@ -1,36 +1,13 @@
-.Box-Landing {
-  width: 100%;
-  height: 300px;
-  background-color: var(--Second-Background);
-  overflow: hidden;
-  border-radius: 0.6rem;
-}
-
-@media (max-width: 768px) {
-  .Box-Landing {
-  height: 220px;
-}
-}
-
-@media (max-width: 576px) {  
-  .Box-Landing {
-  height: 220px;
-  }
-}
-
-
 .Box-Img {
   width: 324px;
   left: -50%;
   position: absolute;
   transform: translateX(30%);
 }
-.Box-Content,
-.Container-Avatar {
+.Box-Content {
   background-color: var(--Main-Color);
 
   padding: 0.3rem 0.5rem;
-  margin: 0.6rem 0.6rem 0.5rem;
   border-radius: 0.6rem;
   line-height: 1px;
 }
@@ -53,10 +30,6 @@
   .Box-Content {
     padding: 0.5rem 1rem;
   }
-}
-
-.Container-Avatar {
-  margin: 0.9rem 0;
 }
 
 .Avatar {
@@ -112,4 +85,10 @@
   width: 50%;
   height: 1px;
   background-color: var(--Main-Color);
+}
+
+@media (max-width: 575px) {
+  .Right-Landing .Box-Two div:nth-child(1) {
+    /* background-color: red; */
+  }
 }

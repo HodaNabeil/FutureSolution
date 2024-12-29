@@ -26,6 +26,7 @@ export const Lang = {
   TO: "To",
   SELECT_ALL: "Select All",
   UNSELECT_ALL: "UnSelect All",
+  CUSTOMER_REVIEWS: "customer reviews",
 
   // ==============NavBar
 
@@ -47,9 +48,13 @@ export const Lang = {
         TITLE: "Mohmmed Ahmed",
         DES: "They care about the smallest details",
       },
+      CARD_2: {
+        TITLE: "Ahmed Suleiman",
+        DES: "Excellent service",
+      },
     },
     SERVICES: {
-      DATA_SER: [
+      SERVICE_DESCRIPTION: [
         "The company’s technological efficiency and quality reflect its ability to deliver innovative and reliable products...",
 
         "The efficiency of a technology company means providing innovative and high-quality solutions...",
@@ -59,6 +64,13 @@ export const Lang = {
         "Efficiency, quality, data security, and customer support are the cornerstones of a successful technology company...",
 
         "Efficiency, quality, data security, customer support, and web app development are vital for a thriving technology company...",
+      ],
+      SERVICE_TITLE: [
+        "Quality",
+        "Efficiency",
+        "Data Security",
+        "Customer Support",
+        "Web App Development",
       ],
       DATA_SER_2: [
         "We design high-quality, user-focused applications that blend creativity with advanced functionality, turning your ideas into intuitive, impactful solutions.",

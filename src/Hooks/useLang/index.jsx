@@ -7,7 +7,10 @@ export default function useLang() {
     const [Language, setLanguage] = useState({})
     useEffect(() => {
         const InitLang = async () => {
-            let defaultLang = Lang ? Lang : Helper.GetStorage("Lang")
+            let defaultLang = Lang ? Lang : Helper.GetStorage("Lang");
+            console.log({
+                defaultLang
+            })
             if (!AllowedLangs.includes(defaultLang)) {
                 let Language = await import(`../../Lang/en.js`)
                 setLanguage(Language.Lang)

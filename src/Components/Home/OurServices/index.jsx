@@ -1,29 +1,43 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import "./services.css";
 import DesModal from "../../../Common/Modale";
 import CardServies from "./Card";
+import { useLang } from "@/Hooks";
+import { useSelector } from "react-redux";
 
 
 
 const OurServices = () => {
+
     const [ModalData, setModalData] = useState({
         isOpen: false,
         img: "",
         description: "",
     });
-
+    const { Rtl } = useSelector(state => state.Helper)
     const ModleRef = useRef()
+    const Lang = useLang()
 
-
+    const Options = useMemo(() => {
+        if (!window.Config?.ServicesData) return [];
+        return window.Config?.ServicesData.map((Item) => ({
+            ...Item,
+            description: Lang?.PAGE_HOME?.SERVICES?.SERVICE_DESCRIPTION?.[Item.id],
+            title: Lang?.PAGE_HOME?.SERVICES?.SERVICE_TITLE?.[Item.id]
+        }))
+    }, [Lang?.PAGE_HOME?.SERVICES?.SERVICE_DESCRIPTION, Lang?.PAGE_HOME?.SERVICES?.SERVICE_TITLE])
+    console.log(Options)
     return (
         <div className="  ">
-            <div className="relative ">
+            <div className="relative "
+                dir={Rtl ? "rtl" : 'ltr'}
+            >
                 <div
                     className="flex justify-between items-center Card-Light Shadow-Lg 
          
                 absolute  left-[50%]  w-[80%] m-auto translate-x-[-50%] top-[-50px] "
                 >
-                    {window.Config?.ServicesData && window.Config?.ServicesData?.map((item, index) => (
+                    {Options.map((item, index) => (
                         <div key={index} className="flex  flex-col  gap-[0.3rem] md:flex-row items-center    p-[0.3rem]   sm:px-[0.2rem] sm:py-[1rem]   sm:gap-[0.5rem]">
                             <div className=" w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]">
                                 <img
@@ -49,19 +63,20 @@ const OurServices = () => {
                 </div>
             </div>
 
-            {/* Render the Modal if isOpen is true */}
-            {ModalData.isOpen && (
-                <DesModal
-                    des={ModalData.description}
-                    img={ModalData.img}
+            {
+                ModalData.isOpen && (
+                    <DesModal
+                        des={ModalData.description}
+                        img={ModalData.img}
 
-                    ModleRef={ModleRef}
-                    onClose={() => setModalData({ isOpen: false, img: "", description: "" })
+                        ModleRef={ModleRef}
+                        onClose={() => setModalData({ isOpen: false, img: "", description: "" })
 
 
-                    }
-                />
-            )}
+                        }
+                    />
+                )
+            }
 
 
             <div className=" container">
@@ -87,7 +102,7 @@ const OurServices = () => {
             </div>
 
 
-        </div>
+        </div >
     );
 };
 
