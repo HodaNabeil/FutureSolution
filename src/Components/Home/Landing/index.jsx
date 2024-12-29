@@ -5,8 +5,7 @@ import "./landin.css";
 const Landing = ({ Lang, Rtl }) => {
     const DirButtonIcon = Rtl ? " Icon-Main-Btn-Rtl " : " Icon-Main-Btn";
     const DirButton = Rtl ? " Main-Btn-Rtl " : " Main-Btn";
-    // "Eng sabry"
-    // const StyleWidthBoxTwo = Rtl ? " basis-[75%]   " : "  basis-[67%] "
+
     const HandleGoTo = (To) => {
         if (To?.startsWith("#")) {
             const Element = document.getElementById(To?.slice(1))
@@ -93,41 +92,49 @@ const Landing = ({ Lang, Rtl }) => {
 
                         <div className="   Box-2   absolute bottom-0 left-0 w-full    Bg-light  Rounded-6 px-[0.5rem] py-[0.7rem]">
                             <div className=" flex  justify-center gap-x-[2px] ">
-                                <div className="Avatar  Flex-Center">
+                                <div className="Avatar  Flex-Center"
+
+
+
+                                    onClick={() => HandleGoTo("#Reviews")}
+
+
+                                >
                                     <img
-                                        src="/Img/lang_1.png"
+                                        src="/Img/Landing-img-2.png"
                                         className=" rounded-[50%] object-cover w-full h-[100%]"
                                         alt=" Avatar"
                                     />
                                 </div>
-                                <div className="Avatar Flex-Center">
+                                <div className="Avatar Flex-Center"
+                                    onClick={() => HandleGoTo("#Reviews")}
+
+                                >
                                     <img
-                                        src="/Img/lang_1.png"
+                                        src="/Img/client_2.jpg"
                                         className=" rounded-[50%] object-cover w-full h-[100%]"
                                         alt=" Avatar"
                                     />
                                 </div>
-                                <div className="Avatar Flex-Center">
+
+                                <div className="Avatar Flex-Center"
+
+                                    onClick={() => HandleGoTo("#Reviews")}
+
+
+
+
+
+
+
+                                >
                                     <img
-                                        src="/Img/lang_1.png"
-                                        className=" rounded-[50%] object-cover w-full h-[100%]"
-                                        alt=" Avatar"
-                                    />
-                                </div>
-                                <div className="Avatar Flex-Center">
-                                    <img
-                                        src="/Img/lang_1.png"
+                                        src="/Img/client_3.jpg"
                                         className=" rounded-[50%] object-cover w-full h-[100%]"
                                         alt="Avatar "
                                     />
                                 </div>
-                                <div className="Avatar Flex-Center">
-                                    <img
-                                        src="/Img/lang_1.png"
-                                        className=" rounded-[50%] object-cover w-full h-[100%]"
-                                        alt="Avatar "
-                                    />
-                                </div>
+
                             </div>
                             <p className="  text-sm Flex-Center Second-Color pt-[0.2rem]  ">
                                 {" "}
@@ -153,7 +160,7 @@ const Landing = ({ Lang, Rtl }) => {
                             <div className=" font-bold ">
                                 <h2 className="Active-Color   text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]">
                                     {" "}
-                                    547 +
+                                    {window?.Config?.Number_clients}+
                                 </h2>
                                 <p className="Second-Color   text-[14px]">
                                     {" "}

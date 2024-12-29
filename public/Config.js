@@ -74,4 +74,5 @@ window.Config = {
       Img: "/Img/Serv/Imgser6.png",
     },
   ],
+  Number_clients: "50",
 };

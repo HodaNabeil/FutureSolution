@@ -37,6 +37,7 @@
   height: 2rem;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
