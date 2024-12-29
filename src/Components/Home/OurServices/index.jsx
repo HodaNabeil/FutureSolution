@@ -15,7 +15,7 @@ const OurServices = ({
     const [ModalData, setModalData] = useState({
         isOpen: false,
         img: "",
-        description: "",
+        Description: "",
     });
     const ModleRef = useRef()
 
@@ -67,7 +67,7 @@ const OurServices = ({
                                     setModalData({
                                         isOpen: true,
                                         img: item.img,
-                                        description: item.description,
+                                        Description: item.Description,
                                     })
                                 }
                                 className="hover:Active-Color duration-150 transition-all cursor-pointer   text-center md:text-left text-[10px] sm:text-[14px] sm:text-sm lg:text-[1rem]"
@@ -82,11 +82,11 @@ const OurServices = ({
             {
                 ModalData.isOpen && (
                     <DesModal
-                        des={ModalData.description}
+                        des={ModalData.Description}
                         img={ModalData.img}
 
                         ModleRef={ModleRef}
-                        onClose={() => setModalData({ isOpen: false, img: "", description: "" })
+                        onClose={() => setModalData({ isOpen: false, img: "", Description: "" })
 
 
                         }
