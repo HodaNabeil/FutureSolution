@@ -111,4 +111,13 @@
     margin: 0;
     padding: 0.3rem;
   }
+  .Right-Landing .Col-2 .Box-1 {
+    position: relative;
+    top: -90px;
+  }
+  .Right-Landing .Col-2 .Box-2 {
+    position: relative;
+    height: 180px;
+    top: -80px;
+  }
 }
