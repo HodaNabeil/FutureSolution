@@ -109,7 +109,7 @@ const Landing = ({
                         <div
 
 
-                            className={` flex  absolute left-0  top-[-4.2rem] lg:top-[-5.2rem] w-full  z-[3] flex-col  Card-Light `}>
+                            className={` flex  absolute left-0  top-[-4.2rem] lg:top-[-5.2rem]    w-full  z-[3] flex-col  Card-Light `}>
                             <div className="  flex justify-end  ">
                                 <div className="w-[2.2rem] h-[2.2rem]   md:w-[2.5rem] md:h-[2.5rem]  lg:w-[3.8rem] lg:h-[3.8rem] Flex-Center   rounded-[50%] Bg-Dark ">
                                     <img src="/Img/icon-landing.png" alt="logo"
@@ -127,7 +127,7 @@ const Landing = ({
                             </div>
                         </div>
 
-                        <div className={`     sm:basis-[75%]    overflow-hidden   Bg-Second Rounded-6    relative `}>
+                        <div className={`    basis-[75%]    overflow-hidden   Bg-Second Rounded-6    relative `}>
                             <img src="/Img/client_2.jpg" alt="Hero-Landing"
                                 className=" object-cover  w-[100%] h-[100%] "
                             />

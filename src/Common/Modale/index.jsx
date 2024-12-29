@@ -6,7 +6,7 @@ import { CgClose } from "react-icons/cg";
 function DesModal({ des, img, onClose, ModleRef }) {
     return (
         <div ref={ModleRef} className="Modal">
-            <div className=" Overlay-Modal"> </div>
+            <div className=" Overlay-Modal "> </div>
 
             <div
                 className="Content-Modal 
@@ -15,21 +15,22 @@ function DesModal({ des, img, onClose, ModleRef }) {
             items-center 
             flex-col
             w-[50%] 
+            h-[50vh]
             z-10  
             fixed
             top-[50%] left-[50%]  
             translate-x-[-50%] translate-y-[-50%]
             Bg-light
-               p-[0.5rem]   sm:p-[0.8rem]      md:p-[1rem]          lg:p-[1.9rem]
+               p-[0.5rem]   sm:p-[0.8rem]      md:p-[1.5rem]          lg:p-[2rem]
             Rounded-6
             "
                 style={{
                     boxShadow: "0px 0px 16px 4px #05050587",
                 }}
             >
-                <div className="w-[4rem]  sm:w-[13rem]  md:w-[16rem]  lg:w-[23.5rem]  h-[100%] Flex-Center ">
+                <div className="   w-[80%]       Flex-Center ">
                     <img
-                        className=" max-w-[100%] h-full Rounded-6 object-cover"
+                        className=" max-w-[100%]   max-h-full Rounded-6 object-cover"
                         src={`/Img/Serv/${img}`}
                         alt={des}
                     />
