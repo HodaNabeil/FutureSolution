@@ -38,8 +38,8 @@ const OurServices = () => {
                 absolute  left-[50%]  w-[80%] m-auto translate-x-[-50%] top-[-50px] "
                 >
                     {Options.map((item, index) => (
-                        <div key={index} className="flex  flex-col  gap-[0.3rem] md:flex-row items-center    p-[0.3rem]   sm:px-[0.2rem] sm:py-[1rem]   sm:gap-[0.5rem]">
-                            <div className=" w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]">
+                        <div key={index} className="flex  flex-col  gap-[0.3rem] md:flex-row items-center  p-[0.1rem]  sm:p-[0.3rem]   sm:px-[0.2rem] sm:py-[1rem]   sm:gap-[0.5rem]">
+                            <div className=" w-[1.5rem] h-[1.5rem]   sm:h-[1.9rem]  sm:w-[1.9rem] md:w-[2.5rem] md:h-[2.5rem] lg:w-[3.8rem] lg:h-[3.8rem]">
                                 <img
                                     src={`/Img/Serv/${item.icon}`}
                                     className="object-cover w-full h-full"
@@ -80,8 +80,8 @@ const OurServices = () => {
 
 
             <div className=" container">
-                <div className="pt-[5rem]  Flex-Center  font-bold text-[1.5rem] Active-Color capitalize ">
-                    Our Servies
+                <div className=" pt-[2rem] md:pt-[5rem]  Flex-Center  font-bold text-[1.5rem] Active-Color capitalize ">
+                    {Lang?.PAGE_HOME?.SERVICES?.MAN_TITLE}
                 </div>
 
                 <div className="Container-servies  grid   gap-[1rem]  sm:grid-cols-2 md:grid-cols-3  my-[2rem] overflow-hidden">

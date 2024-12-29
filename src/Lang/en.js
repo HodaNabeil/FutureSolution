@@ -54,6 +54,7 @@ export const Lang = {
       },
     },
     SERVICES: {
+      MAN_TITLE: " Our Servies",
       SERVICE_DESCRIPTION: [
         "The company’s technological efficiency and quality reflect its ability to deliver innovative and reliable products...",
 

@@ -46,6 +46,7 @@ export const Lang = {
       },
     },
     SERVICES: {
+      MAN_TITLE: "خدماتنا",
       SERVICE_DESCRIPTION: [
         "تعكس الكفاءة التكنولوجية للشركة وجودتها قدرتها على تقديم منتجات مبتكرة وموثوقة",
 
