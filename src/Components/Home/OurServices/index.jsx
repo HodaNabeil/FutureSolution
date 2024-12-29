@@ -22,11 +22,22 @@ const OurServices = () => {
         if (!window.Config?.ServicesData) return [];
         return window.Config?.ServicesData.map((Item) => ({
             ...Item,
-            description: Lang?.PAGE_HOME?.SERVICES?.SERVICE_DESCRIPTION?.[Item.id],
+            Description: Lang?.PAGE_HOME?.SERVICES?.SERVICE_DESCRIPTION?.[Item.id],
             title: Lang?.PAGE_HOME?.SERVICES?.SERVICE_TITLE?.[Item.id]
         }))
     }, [Lang?.PAGE_HOME?.SERVICES?.SERVICE_DESCRIPTION, Lang?.PAGE_HOME?.SERVICES?.SERVICE_TITLE])
-    console.log(Options)
+
+
+    const SubOptions = useMemo(() => {
+        if (!window.Config?.ServiceDetails) return [];
+        return window.Config?.ServiceDetails.map((Item) => ({
+            ...Item,
+            Description: Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.DESCRIPTION?.[Item.id],
+
+            // PAGE_HOME   SUB_SERVICES TITLE
+            Title: Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.TITLE?.[Item.id]
+        }))
+    }, [Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.DESCRIPTION, Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.TITLE])
     return (
         <div className="  ">
             <div className="relative "
@@ -38,8 +49,12 @@ const OurServices = () => {
                 absolute  left-[50%]  w-[80%] m-auto translate-x-[-50%] top-[-50px] "
                 >
                     {Options.map((item, index) => (
-                        <div key={index} className="flex  flex-col  gap-[0.3rem] md:flex-row items-center  p-[0.1rem]  sm:p-[0.3rem]   sm:px-[0.2rem] sm:py-[1rem]   sm:gap-[0.5rem]">
-                            <div className=" w-[1.5rem] h-[1.5rem]   sm:h-[1.9rem]  sm:w-[1.9rem] md:w-[2.5rem] md:h-[2.5rem] lg:w-[3.8rem] lg:h-[3.8rem]">
+                        <div key={index} className="flex  flex-col  gap-[0.3rem] md:flex-row items-center  
+                        px-[0.1rem] py-0  sm:p-[0.3rem]    sm:gap-[0.5rem]">
+                            <div
+                                className=" w-[1.5rem] h-[1.5rem]   sm:h-[1.9rem]  
+                             sm:w-[1.9rem] md:w-[2.5rem] md:h-[2.5rem]
+                              lg:w-[3.8rem] lg:h-[3.8rem]">
                                 <img
                                     src={`/Img/Serv/${item.icon}`}
                                     className="object-cover w-full h-full"
@@ -80,17 +95,16 @@ const OurServices = () => {
 
 
             <div className=" container">
-                <div className=" pt-[2rem] md:pt-[5rem]  Flex-Center  font-bold text-[1.5rem] Active-Color capitalize ">
+                <div className="  pt-[4.5rem]   sm:pt-[4.5rem] md:pt-[4rem]  lg:pt-[5rem] Flex-Center  font-bold text-[1.5rem] Active-Color capitalize ">
                     {Lang?.PAGE_HOME?.SERVICES?.MAN_TITLE}
                 </div>
 
                 <div className="Container-servies  grid   gap-[1rem]  sm:grid-cols-2 md:grid-cols-3  my-[2rem] overflow-hidden">
 
                     {
-                        window.Config?.ServiceDetails && window.Config?.ServiceDetails.map((item, index) => {
+                        SubOptions?.map((item, index) => {
 
 
-                            // console.log({})
                             return (<CardServies key={index} item={item} />)
 
 

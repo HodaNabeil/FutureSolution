@@ -20,7 +20,7 @@ function DesModal({ des, img, onClose, ModleRef }) {
             top-[50%] left-[50%]  
             translate-x-[-50%] translate-y-[-50%]
             Bg-light
-               p-[0.5rem]   sm:p-[1rem]      md:p-[1.2rem]          lg:p-[1.9rem]
+               p-[0.5rem]   sm:p-[0.8rem]      md:p-[1rem]          lg:p-[1.9rem]
             Rounded-6
             "
                 style={{

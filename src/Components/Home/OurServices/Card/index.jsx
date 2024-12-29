@@ -4,7 +4,7 @@
 
 
 const CardServies = ({ item }) => {
-    const { Img, Title, Des } = item
+    const { Img, Title, Description } = item
     return (
         <div className=" Box-servies
         Bg-light
@@ -24,7 +24,7 @@ const CardServies = ({ item }) => {
                 <h2 className="Active-Color mb-[1.5rem] capitalize">{Title}</h2>
                 <p className=" Second-Color text-center ">
                     {
-                        Des
+                        Description
                     }
                 </p>
             </div>

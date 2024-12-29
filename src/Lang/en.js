@@ -85,6 +85,31 @@ export const Lang = {
         "We provide fast and secure web hosting services tailored to your business needs. Whether you're managing a small website or a large platform, we offer solutions.",
         "We provide a fast and secure environment to get tasks done efficiently, while ensuring data security and easy access without the need for the Internet. It can also be customized to meet the needs of the project, which enhances productivity and provides a superior user experience.",
       ],
+
+      //   PAGE_HOME   SERVICES SUB_SERVICES TITLE
+
+      SUB_SERVICES: {
+        TITLE: [
+          "ِApplction Design",
+          "Web Hosting",
+          "Seo Optimization",
+          "Data analysis",
+          "Website programming  ",
+          "Desktop Application",
+        ],
+        DESCRIPTION: [
+          "We design high-quality, user-focused applications that blend creativity with advanced functionality, turning your ideas into intuitive, impactful solutions.",
+
+          "We provide fast and secure web hosting services tailored to your business needs. Whether you're managing a small website or a large platform, we offer solutions.",
+
+          "Fast, secure web hosting with built -in SEO optimization to enhance visibility and drive traffic.",
+
+          "We help transform data into actionable insights that help improve decision making, identify opportunities, and enhance performance for sustainable growth and higher efficiency.",
+
+          "We provide fast and secure web hosting services tailored to your business needs. Whether you're managing a small website or a large platform, we offer solutions.",
+          "We provide a fast and secure environment to get tasks done efficiently, while ensuring data security and easy access without the need for the Internet. It can also be customized to meet the needs of the project, which enhances productivity and provides a superior user experience.",
+        ],
+      },
     },
 
     REVIEWSLIDER: {
