@@ -26,13 +26,14 @@ export const Lang = {
   UNSELECT_ALL: "UnSelect All",
   CUSTOMER_REVIEWS: "آراء العملاء",
   // ============Navbar Links
-  NAVBAR_LINKS: ["الصفحة الرئيسية", "خدماتنا", "نحن", "اتصل بنا"],
+  NAVBAR_LINKS: ["الصفحة الرئيسية", "خدماتنا", "أراء العملاء", "اتصل بنا"],
   PAGE_HOME: {
     lANDING: {
-      SUB_TITLE: "حلول مستقبل",
-      TOP_TITLE: "مبتكرة",
+      SUB_TITLE: "حلول المستقبل",
+      TOP_TITLE: "الحلول",
       PART_OF_TITLE: "لمتطلباتك الرقمية",
-      UNIQUE_KEY_TITLE: "الحلول",
+      UNIQUE_KEY_TITLE: "المبتكرة",
+      // UNIQUE_KEY_TITLE: "الحلول",
       DES_LANDING: "نجعل أفكارك حقيقة",
       TEXT_BUTTON: "احصل على استشارة",
       NUMBER_CLIENT: "عدد العملاء",
@@ -126,6 +127,6 @@ export const Lang = {
 
   //{FOOTER?.COLS?.COL_1.TITLE}
   FOOTER: {
-    COPYR: "يناير جميع الحقوق محفوظة",
+    COPYR: "جميع الحقوق محفوظة",
   },
 };

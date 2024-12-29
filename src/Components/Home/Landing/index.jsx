@@ -7,6 +7,18 @@ const Landing = ({ Lang, Rtl }) => {
     const DirButton = Rtl ? " Main-Btn-Rtl " : " Main-Btn";
     // "Eng sabry"
     // const StyleWidthBoxTwo = Rtl ? " basis-[75%]   " : "  basis-[67%] "
+    const HandleGoTo = (To) => {
+        if (To?.startsWith("#")) {
+            const Element = document.getElementById(To?.slice(1))
+            if (Element) {
+                return Element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                })
+            }
+            return
+        }
+    }
     return (
         <div className="Main-Bg h-[100vh] w-full   relative">
             <div
@@ -15,10 +27,10 @@ const Landing = ({ Lang, Rtl }) => {
                top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%]  "
             >
                 <div className="  Main-Color   flex  flex-col items-center      md:items-start     w-[100%] md:w-[45%]  lg:w-[55%] ">
-                    <h1 className=" font-bold text-[l.1rem]  md:text-[1.3rem]  lg:text-[1.9rem] capitalize   relative  ">
-                        <span className="Sub-Title-Hero  md:text-[0.9rem] text-[1.01rem] ">
+                    <div className=" font-bold text-[l.1rem]  md:text-[1.3rem]  lg:text-[1.9rem] capitalize   relative  ">
+                        <h1 className="Sub-Title-Hero  md:text-[1rem] text-[1.01rem] ">
                             {Lang?.PAGE_HOME?.lANDING?.SUB_TITLE}
-                        </span>
+                        </h1>
                         {Lang?.PAGE_HOME?.lANDING?.TOP_TITLE}
                         <br />
                         <span
@@ -32,7 +44,7 @@ const Landing = ({ Lang, Rtl }) => {
                             {Lang?.PAGE_HOME?.lANDING?.UNIQUE_KEY_TITLE}
                         </span>{" "}
                         {Lang?.PAGE_HOME?.lANDING?.PART_OF_TITLE}
-                    </h1>
+                    </div>
 
                     <p className=" mt-[1.3rem]">
                         {Lang?.PAGE_HOME?.lANDING?.DES_LANDING}
@@ -42,7 +54,11 @@ const Landing = ({ Lang, Rtl }) => {
                     </p>
 
                     <button
+                        type="button"
+                        aria-label="button"
+                        title={Lang?.PAGE_HOME?.lANDING?.TEXT_BUTTON}
                         className={`Main-Btn Second-Color w-fit  flex items-center my-[0.8rem]  md:my-[1rem] lg:my-[1.2rem] ${DirButton}`}
+                        onClick={() => HandleGoTo("#Contact")}
                     >
                         <span>{Lang?.PAGE_HOME?.lANDING?.TEXT_BUTTON}</span>
                         {Rtl ? (
@@ -127,9 +143,9 @@ const Landing = ({ Lang, Rtl }) => {
                             <div className="  flex justify-end  ">
                                 <div className="w-[2.2rem] h-[2.2rem]   md:w-[2.5rem] md:h-[2.5rem]  lg:w-[3.8rem] lg:h-[3.8rem] Flex-Center   rounded-[50%] Bg-Dark ">
                                     <img
-                                        src="/Img/icon-landing.png"
+                                        src="/Img/icons/96.png"
                                         alt="logo"
-                                        className="object-cover   w-[80%]  rounded-[50%]"
+                                        className="object-cover   w-[100%]  rounded-[50%]"
                                     />
                                 </div>
                             </div>

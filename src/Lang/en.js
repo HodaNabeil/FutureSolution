@@ -30,7 +30,7 @@ export const Lang = {
 
   // ==============NavBar
 
-  NAVBAR_LINKS: ["Home", "Our Services", "About", "Contact"],
+  NAVBAR_LINKS: ["Home", "Our Services", "Customer Reviews", "Contact"],
 
   //  PAGE_HOME?.lANDING?.?SUB_TITLE
   PAGE_HOME: {
@@ -131,8 +131,7 @@ export const Lang = {
       },
     },
   },
-  //{FOOTER?.COLS?.COL_1.TITLE}
   FOOTER: {
-    COPYR: " A-January ALL RIGHTS RESERVED",
+    COPYR: "All Rights Reserved",
   },
 };

@@ -6,7 +6,9 @@ import "./contact.css";
 function Contact({ Rtl, Lang }) {
 
     return (
-        <div className="contact-page ">
+        <div className="contact-page "
+            id={"Contact"}
+        >
 
 
             <div className=" Bg-light">

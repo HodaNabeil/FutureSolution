@@ -1,7 +1,3 @@
-/* eslint-disable react/prop-types */
-
-
-
 import "./footer.css"
 function Footer({
   Lang,
@@ -23,7 +19,8 @@ function Footer({
         <div dir={
           Rtl ? "rtl" : "ltr"
         } className="  Second-Color   text-[1rem]   md:text-xl  ">
-          {Lang?.FOOTER?.COPYR} 2025
+          {Lang?.FOOTER?.COPYR}
+          <span dir={"ltr"}  className="mx-[.5rem]"> &copy; {new Date().getFullYear()}</span>
         </div>
       </div>
     </div>

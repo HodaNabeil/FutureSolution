@@ -40,7 +40,9 @@ const OurServices = ({
         }))
     }, [Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.DESCRIPTION, Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.TITLE])
     return (
-        <div className="  ">
+        <div className="  "
+            id={"Services"}
+        >
             <div className="relative "
                 dir={Rtl ? "rtl" : 'ltr'}
             >

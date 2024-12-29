@@ -49,7 +49,9 @@ function ReviewSlider({
     }, []);
 
     return (
-        <div className="Bg-light review-slider pt-[80px] ">
+        <div className="Bg-light review-slider pt-[80px] "
+            id={"Reviews"}
+        >
             <div className=" container  bg-white py-[50px] "
                 dir=
                 {

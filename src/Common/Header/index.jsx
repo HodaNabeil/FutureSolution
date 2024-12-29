@@ -6,13 +6,14 @@ import { SetNewLang } from "@/Redux";
 import { useLang } from "@/Hooks";
 import { Helper } from "@/Utility";
 import OurServices from "@/Components/Home/OurServices";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
 function Header({ schangebackground }) {
 
     const Lang = useLang()
+    const Navigate = useNavigate()
     const HeaderRef = useRef();
     const [OpenNav, setOpenNav] = useState(false);
     const { Lang: CurrentLang, Rtl } = useSelector(state => state.Helper)
@@ -60,11 +61,23 @@ function Header({ schangebackground }) {
 
     const Links = [
         { NameLink: Lang?.NAVBAR_LINKS?.[0] || "Home", to: "/" },
-        { NameLink: Lang?.NAVBAR_LINKS?.[1] || "Our Services", to: <OurServices /> },
-        { NameLink: Lang?.NAVBAR_LINKS?.[2] || "About", to: "#about" },
-        { NameLink: Lang?.NAVBAR_LINKS?.[3] || "Contact", to: "#contact" },
+        { NameLink: Lang?.NAVBAR_LINKS?.[1] || "Our Services", to: "#Services" },
+        { NameLink: Lang?.NAVBAR_LINKS?.[2] || "About", to: "#Reviews" },
+        { NameLink: Lang?.NAVBAR_LINKS?.[3] || "Contact", to: "#Contact" },
     ];
-
+    const HandleGoTo = (To) => {
+        if (To?.startsWith("#")) {
+            const Element = document.getElementById(To?.slice(1))
+            if (Element) {
+                return Element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                })
+            }
+            return
+        }
+        Navigate(To)
+    }
     function Toggle() {
         setOpenNav((prev) => !prev);
     }
@@ -111,14 +124,17 @@ function Header({ schangebackground }) {
                         const DirClass = Rtl ? "nav-link-Rtl" : " "
                         return (
                             <li key={index}
-
+                                onClick={() => HandleGoTo(link.to)}
+                                style={{
+                                    cursor: 'pointer'
+                                }}
                             >
-                                <Link to={link.to}
+                                <p
 
                                     className={`nav-link ${DirClass} ${OpenNav ? "Show" : ""}`}
                                 >
                                     {link.NameLink}
-                                </Link>
+                                </p>
                             </li>
                         );
                     })}
