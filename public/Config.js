@@ -45,7 +45,7 @@ window.Config = {
       id: 4,
       icon: "serv-5.png",
       title: "Web App Development",
-      img: "serv-5.png",
+      img: "Modal-6.jpg",
     },
   ],
   ServiceDetails: [

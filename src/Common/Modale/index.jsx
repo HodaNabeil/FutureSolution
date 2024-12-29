@@ -14,8 +14,8 @@ function DesModal({ des, img, onClose, ModleRef }) {
             justify-center
             items-center 
             flex-col
-            w-[50%] 
-            h-[50vh]
+              w-[90%] m-auto     sm:w-[50%] 
+             h-[60vh]  sm:h-[50vh]
             z-10  
             fixed
             top-[50%] left-[50%]  
@@ -28,7 +28,7 @@ function DesModal({ des, img, onClose, ModleRef }) {
                     boxShadow: "0px 0px 16px 4px #05050587",
                 }}
             >
-                <div className="   w-[80%]       Flex-Center ">
+                <div className="   w-[80%]  max-h-full   p-[0.5rem]  overflow-hidden    Flex-Center ">
                     <img
                         className=" max-w-[100%]   max-h-full Rounded-6 object-cover"
                         src={`/Img/Serv/${img}`}
