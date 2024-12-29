@@ -58,15 +58,15 @@ const Landing = ({
 
                 </div>
 
-                <div className="  Right-Landing    w-[100%]  md:w-[55%] lg:w-[45%] grid grid-cols-2   gap-[1rem] relative top-[2.5rem]    ">
-                    <div className="  Box-One  relative ">
+                <div className="  Right-Landing    w-[100%]  md:w-[55%] lg:w-[45%]    grid grid-cols-2   gap-[1rem] relative top-[2.5rem]    ">
+                    <div className="  Col-1 relative ">
 
 
-                        <div className=" overflow-hidden  relative   top-[-2.8rem] md:top-[-1.8rem] Bg-Second Rounded-6    h-[75%]    ">
+                        <div className="  Box-1  overflow-hidden  relative   top-[-2.8rem] md:top-[-1.8rem] Bg-Second Rounded-6    h-[75%]    ">
                             <img src="/Img/lang_1.png" alt="Hero-Landing"
                                 className=" object-cover  w-[100%] h-[100%] "
                             />
-                            <div className=" text-center md:text-left  
+                            <div className=" Content-Box-1 text-center md:text-left  
                               absolute  Bg-light  p-[0.5rem] bottom-[0px] m-[0.6rem] 
                                  Second-Color   Rounded-6    "
                             >
@@ -80,7 +80,7 @@ const Landing = ({
 
 
 
-                        <div className=" absolute bottom-0 left-0 w-full    Bg-light  Rounded-6 px-[0.5rem] py-[0.7rem]">
+                        <div className="   Box-2   absolute bottom-0 left-0 w-full    Bg-light  Rounded-6 px-[0.5rem] py-[0.7rem]">
                             <div className=" flex  justify-center gap-x-[2px] ">
 
                                 <div className="Avatar  Flex-Center">
@@ -105,7 +105,7 @@ const Landing = ({
                         </div>
                     </div>
 
-                    <div className="  Box-Two  relative flex justify-end  flex-col  ">
+                    <div className=" Col-2  relative flex justify-end  flex-col  ">
                         <div
 
 
