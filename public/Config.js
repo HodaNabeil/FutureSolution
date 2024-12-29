@@ -52,32 +52,26 @@ window.Config = {
     {
       id: 0,
       Img: "/Img/Serv/Imgser1.png",
-      Title: "ِApplction Design",
     },
     {
       id: 1,
       Img: "/Img/Serv/Imgser2.png",
-      Title: "Web Hosting",
     },
     {
       id: 2,
       Img: "/Img/Serv/Imgser3.png",
-      Title: "Seo Optimization",
     },
     {
       id: 3,
       Img: "/Img/Serv/Imgser4.png",
-      Title: "Data analysis",
     },
     {
       id: 4,
       Img: "/Img/Serv/Imgser5.png",
-      Title: "Website programming  ",
     },
     {
       id: 5,
       Img: "/Img/Serv/Imgser6.png",
-      Title: "Desktop Application",
     },
   ],
 };

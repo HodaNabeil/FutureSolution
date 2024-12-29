@@ -108,7 +108,7 @@ function Header({ schangebackground }) {
                     dir={Rtl ? "rtl" : 'ltr'}
                 >
                     {Links?.map((link, index) => {
-                        const DirClass = Rtl ? "nav-link-Rtl" : ""
+                        const DirClass = Rtl ? "nav-link-Rtl" : " "
                         return (
                             <li key={index}
 

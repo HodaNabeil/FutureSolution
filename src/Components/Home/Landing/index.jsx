@@ -1,15 +1,17 @@
+/* eslint-disable react/prop-types */
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./landin.css"
-import { useLang } from "../../../Hooks";
-import { useSelector } from "react-redux";
-const Landing = () => {
 
-    const Lang = useLang()
-    const { Rtl } = useSelector(state => state.Helper)
+const Landing = ({
+    Lang,
+    Rtl
+}) => {
+
+
     const DirButtonIcon = Rtl ? " Icon-Main-Btn-Rtl " : " Icon-Main-Btn"
     const DirButton = Rtl ? " Main-Btn-Rtl " : " Main-Btn"
     // "Eng sabry"
-    const StyleWidthBoxTwo = Rtl ? " basis-[75%]   " : "  basis-[67%] "
+    // const StyleWidthBoxTwo = Rtl ? " basis-[75%]   " : "  basis-[67%] "
     return (
         <div className="Main-Bg h-[100vh] w-full   relative"  >
 

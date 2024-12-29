@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import * as FaIcons from "react-icons/fa";
 import "./contact.css";
-import { useLang } from "@/Hooks";
-function Contact() {
-    const Lang = useLang()
+
+
+function Contact({ Rtl, Lang }) {
+
     return (
         <div className="contact-page ">
 
@@ -27,14 +29,14 @@ function Contact() {
                        Flex-Center      flex-col    mb-[30px]"
                     >
                         <h2 className=" Second-Color  text-[22px] font-medium   capitalize font-2">
-                            contact The{" "}
-                            <span className=" active-color">{Lang?.PAGE_HOME?.lANDING?.SUB_TITLE} </span>
+                            {Lang?.PAGE_HOME?.CONTACT?.TITLE}
                         </h2>
                         <div className=" w-[300px] text-center Second-Color  my-[15px]">
                             {window.Config?.Contact?.Email && (
                                 <div>
                                     <small className="Active-Color  capitalize font-medium mr-[6px]">
-                                        Email
+
+                                        {Lang?.PAGE_HOME?.CONTACT?.SOCIAL?.[0]}
                                     </small>
                                     {window.Config.Contact.Email}
                                 </div>
@@ -43,7 +45,7 @@ function Contact() {
                                 <div className=" my-[10px]">
                                     <small className="Active-Color   capitalize font-medium mr-[6px]">
                                         {" "}
-                                        Phone
+                                        {Lang?.PAGE_HOME?.CONTACT?.SOCIAL?.[1]}
                                     </small>
                                     {window.Config.Contact.Phone}
                                 </div>
@@ -52,7 +54,7 @@ function Contact() {
                                 <div>
                                     <small className="Active-Color  capitalize font-medium mr-[6px]">
                                         {" "}
-                                        Address
+                                        {Lang?.PAGE_HOME?.CONTACT?.SOCIAL?.[2]}
                                     </small>
                                     {window.Config.Contact.Addres}
                                 </div>
@@ -79,20 +81,29 @@ function Contact() {
                             })}
                         </div>
 
-                        <form action="" className=" container-form">
+                        <form
+
+                            dir={Rtl ? "rtl" : "ltr"}
+                            action="" className=" container-form">
                             <div>
-                                <label htmlFor="name">Name</label>
+                                <label htmlFor="name">
+                                    {Lang?.PAGE_HOME?.CONTACT?.FORM?.LABEL?.[0]}
+                                </label>
                                 <input type="text" name="/" id="name" />
                             </div>
                             <div>
-                                <label htmlFor="email">Email</label>
+                                <label htmlFor="email">
+                                    {Lang?.PAGE_HOME?.CONTACT?.FORM?.LABEL?.[1]}
+                                </label>
                                 <input type="email" name="/" id="email" />
                             </div>
                             <div>
-                                <label htmlFor="messge">messge</label>
+                                <label htmlFor="messge">
+                                    {Lang?.PAGE_HOME?.CONTACT?.FORM?.LABEL?.[2]}
+                                </label>
                                 <textarea name="" id="messge"></textarea>
                             </div>
-                            <button className=" Main-Btn  bg-white  my-[1.2rem]">send</button>
+                            <button className=" Main-Btn  bg-white  my-[1.2rem]">{Lang.SUBMIT}</button>
                         </form>
                     </div>
                 </div>

@@ -113,22 +113,26 @@ export const Lang = {
     },
 
     REVIEWSLIDER: {
-      DES: [
-        "High level of sophistication in dealing. Enjoy the quality",
-        "High level of sophistication in dealing. Enjoy the quality",
+      TITLE: ["Hoda Nabeil", "Mohmed Ahmed", "Tark Mohmed"],
 
+      DESCRIPTION: [
         "High level of sophistication in dealing. Enjoy the quality",
+        "Fast implementation and able to create innovative solutions",
+        "24/7 support Ability to find solutions",
       ],
-      CUSTOMER_REVIEWS: "Customer reviews",
+    },
+
+    // commponent CONTACT LABEL Social
+    CONTACT: {
+      TITLE: "contact The Future Solutions",
+      SOCIAL: ["Email", "Phone", "Address"],
+      FORM: {
+        LABEL: ["Name", "Email", "messge"],
+      },
     },
   },
   //{FOOTER?.COLS?.COL_1.TITLE}
   FOOTER: {
-    COPYR: "2025 A-PRIL ALL RIGHTS RESERVED",
-    COLS: {
-      COL_1: {
-        TITLE: "   About Future Solutions ",
-      },
-    },
+    COPYR: " A-January ALL RIGHTS RESERVED",
   },
 };

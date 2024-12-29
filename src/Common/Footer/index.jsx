@@ -1,18 +1,29 @@
+/* eslint-disable react/prop-types */
 
 
 
 import "./footer.css"
-import { useLang } from "@/Hooks";
-function Footer() {
-  const Lang = useLang()
+function Footer({
+  Lang,
+  Rtl
+}) {
   return (
     <div className=" footer Bg-light   ">
-      <div className=" flex justify-between  items-center p-[1rem]">
-        <h4 className="  font-bold     text-xl Active-Color  uppercase">
+      <div
+
+        dir={
+          Rtl ? "rtl" : "ltr"
+        }
+        className=" flex capitalize     justify-between  items-center  p-[0.5rem]  sm:p-[1rem] sm:py-[1.2rem]">
+
+        <h4 className="  font-bold   text-[1rem]   md:text-xl Active-Color  ">
           {Lang?.PAGE_HOME?.lANDING?.SUB_TITLE}
         </h4>
-        <div className="  Second-Color   ">
-          COPYRIGHT ©{Lang?.FOOTER?.COPYR}
+
+        <div dir={
+          Rtl ? "rtl" : "ltr"
+        } className="  Second-Color   text-[1rem]   md:text-xl  ">
+          {Lang?.FOOTER?.COPYR} 2025
         </div>
       </div>
     </div>

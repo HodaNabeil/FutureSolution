@@ -227,6 +227,21 @@
     display: none !important;
     color: var(--Bg-Active) !important;
   }
+
+  .Nav-Links .nav-link-Rtl {
+    right: 50%;
+    transform: translateY(50%);
+    width: fit-content;
+    margin: 30px 0;
+    opacity: 0;
+    transform: translateX(-50%);
+    display: none !important;
+    color: var(--Bg-Active) !important;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+}
   .Nav-Links.Show {
     opacity: 1;
     height: 335px;

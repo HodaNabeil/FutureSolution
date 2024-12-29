@@ -1,22 +1,24 @@
+/* eslint-disable react/prop-types */
 import { useMemo, useRef, useState } from "react";
 import "./services.css";
 import DesModal from "../../../Common/Modale";
 import CardServies from "./Card";
-import { useLang } from "@/Hooks";
-import { useSelector } from "react-redux";
 
 
 
-const OurServices = () => {
+
+const OurServices = ({
+    Lang,
+    Rtl
+}) => {
 
     const [ModalData, setModalData] = useState({
         isOpen: false,
         img: "",
         description: "",
     });
-    const { Rtl } = useSelector(state => state.Helper)
     const ModleRef = useRef()
-    const Lang = useLang()
+
 
     const Options = useMemo(() => {
         if (!window.Config?.ServicesData) return [];
@@ -34,7 +36,6 @@ const OurServices = () => {
             ...Item,
             Description: Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.DESCRIPTION?.[Item.id],
 
-            // PAGE_HOME   SUB_SERVICES TITLE
             Title: Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.TITLE?.[Item.id]
         }))
     }, [Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.DESCRIPTION, Lang?.PAGE_HOME?.SERVICES?.SUB_SERVICES?.TITLE])

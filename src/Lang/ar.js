@@ -3,7 +3,7 @@ export const Lang = {
   NO_DATA: "No Data Founded",
   PREV: "Previous",
   NEXT: "Next",
-  SUBMIT: "Submit",
+  SUBMIT: "ارسال",
   DOWNLOAD: "Download",
   FULL_SCREEN: "Full Screen",
   CHOOSE: "Choose",
@@ -101,24 +101,31 @@ export const Lang = {
         ],
       },
     },
-    REVIEWSLIDER: {
-      DES: [
-        "مستوى عالٍ من التطور في التعامل. استمتع بالجودة",
-        "مستوى عالٍ من التطور في التعامل. استمتع بالجودة",
 
-        "مستوى عالٍ من التطور في التعامل. استمتع بالجودة",
+    // commponent Contact
+    CONTACT: {
+      TITLE: "اتصل بشركة حلول المستقبل",
+      SOCIAL: ["البريد الإلكتروني", "الهاتف", "العنوان"],
+      FORM: {
+        LABEL: ["الاسم", "البريد الإلكتروني", "الرسالة"],
+      },
+    },
+
+    REVIEWSLIDER: {
+      TITLE: ["هدى نبيل", "محمد أحمد", "طارق محمد"],
+      // ["هدى نبيل", "محمد أحمد", "طارق محمد"],
+
+      DESCRIPTION: [
+        "مستوى عالي من الرقي في التعامل. استمتع بالجودة",
+        "سرعة في تنفيذ وقادرة علي ابتكار حلول مبتكرة",
+        "دعم طوال اليوم القدرة علي ايجاد حلول",
       ],
-      CUSTOMER_REVIEWS: "آراء العملاء",
+      CUSTOMER_REVIEWS: "Customer reviews",
     },
   },
 
   //{FOOTER?.COLS?.COL_1.TITLE}
   FOOTER: {
-    COPYR: "2025 A-PRIL ALL RIGHTS RESERVED",
-    COLS: {
-      COL_1: {
-        TITLE: " About Future Solutions ",
-      },
-    },
+    COPYR: "يناير جميع الحقوق محفوظة",
   },
 };

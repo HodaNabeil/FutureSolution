@@ -1,27 +1,30 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
 
 import "./reviewslider.css"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-import { useLang } from "@/Hooks";
-function ReviewSlider() {
+function ReviewSlider({
+    Lang,
+    Rtl
+}) {
     const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
-    const Lang = useLang()
     const reviewSlider = [
         {
             url: "/Img/client_1.jpg",
-            name: "Hoda Nabeil",
-            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DES?.[0]
+            name: Lang?.PAGE_HOME?.REVIEWSLIDER?.TITLE?.[0],
+            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DESCRIPTION?.[0]
         },
         {
             url: "/Img/client_2.jpg",
-            name: "Mohmed Ahmed",
-            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DES?.[1]
+            name: Lang?.PAGE_HOME?.REVIEWSLIDER?.TITLE?.[1],
+            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DESCRIPTION?.[1]
         },
         {
             url: "/Img/client_3.jpg",
-            name: "Tark Mohmed",
-            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DES?.[2]
+            name: Lang?.PAGE_HOME?.REVIEWSLIDER?.TITLE?.[2],
+            des: Lang?.PAGE_HOME?.REVIEWSLIDER?.DESCRIPTION?.[2]
         },
     ];
 
@@ -47,10 +50,14 @@ function ReviewSlider() {
 
     return (
         <div className="Bg-light review-slider pt-[80px] ">
-            <div className=" container  bg-white py-[50px] ">
+            <div className=" container  bg-white py-[50px] "
+                dir=
+                {
+                    Rtl ? "rtl" : "ltr"
+                }>
 
 
-                <h2 className=" Flex-Center font-bold   text-[1.1rem] md:text-xl lg:text-2xl Active-Color">{Lang?.PAGE_HOME?.REVIEWSLIDER?.CUSTOMER_REVIEWS}</h2>
+                <h2 className=" Flex-Center font-bold   text-[1.1rem] md:text-xl lg:text-2xl Active-Color">{Lang?.CUSTOMER_REVIEWS}</h2>
                 <div className=" w-[70%] m-auto relative Rounded-6 p-[1.2rem] mt-[80px]  Bg-Review-Slider ">
                     <div className=" Flex-Center m-auto">
                         <img
